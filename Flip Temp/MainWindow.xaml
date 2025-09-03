@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flip_Temp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Flip Temp" Height="300" Width="400"
+        Background="DarkGray">
+
     <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <TextBox x:Name="UserInputTextBox" Grid.Row="2" Grid.Column="1"
+                   Width="75" Height="35"
+                   VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Center"
+                   Background="Gray" Foreground="WhiteSmoke"/>
+
+        <TextBlock x:Name="ResultTextBlock" Grid.Row="2" Grid.Column="1"
+                   Width="75" Height="35"
+                   Text="Result"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"
+                   Margin="0,50,0,0"
+                   Background="Transparent" Foreground="WhiteSmoke"/>
+                   
 
     </Grid>
 </Window>
