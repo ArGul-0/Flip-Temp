@@ -5,17 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flip_Temp"
         mc:Ignorable="d"
-        Title="Flip Temp" Height="300" Width="400"
-        Background="DarkGray">
+        Title="Flip Temp" Height="300" Width="300" MinHeight="250" MinWidth="250"
+        Background="#2d2d2d">
 
     <Grid>
         
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -24,18 +23,50 @@
 
 
 
-        <TextBox x:Name="UserInputTextBox" Grid.Row="2" Grid.Column="1"
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBox x:Name="UserInputTextBox"
                    Width="75" Height="35"
+                   Text="Enter Temp..."
                    VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Center"
-                   Background="Gray" Foreground="WhiteSmoke"/>
+                   Background ="#32393d" Foreground="#bdbdbd" BorderBrush="#373737	"/>
 
-        <TextBlock x:Name="ResultTextBlock" Grid.Row="2" Grid.Column="1"
+            <TextBlock x:Name="ResultTextBlock"
                    Width="75" Height="35"
-                   Text="Result"
+                   Text="Result: "
                    VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"
-                   Margin="0,50,0,0"
-                   Background="Transparent" Foreground="WhiteSmoke"/>
-                   
+                   Margin="0,25,0,0"
+                   Background="Transparent" Foreground="#bdbdbd"/>
+        </StackPanel>
+
+        <Button x:Name="ChangeButton" Grid.Row="0" Grid.Column="1"
+                   Width="25" Height="25"
+                   Content="↔"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Center" VerticalContentAlignment="Center"
+                   Background="Transparent" Foreground="#bdbdbd" BorderBrush="Transparent"
+                   FontSize="16"
+                   Margin="0, 0, 0, 10"/>
+
+        <TextBlock x:Name="SelectionArrowTextBlock" Grid.Row="0" Grid.Column="1"
+                   Width="50" Height="25"
+                   Text="--->"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"
+                   Background="Transparent" Foreground="#bdbdbd"
+                   FontSize="24"/>
+
+
+
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   Width="50" Height="50"
+                   Text="°C"
+                   VerticalAlignment="Center" HorizontalAlignment="Right"
+                   Background="Transparent" Foreground="#bdbdbd"
+                   FontSize="42"/>
+        <TextBlock Grid.Row="0" Grid.Column="2"
+                   Width="50" Height="50"
+                   Text="°F"
+                   VerticalAlignment="Center" HorizontalAlignment="Left"
+                   Background="Transparent" Foreground="#bdbdbd"
+                   FontSize="42"/>
 
     </Grid>
 </Window>
