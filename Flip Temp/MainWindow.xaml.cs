@@ -1,14 +1,5 @@
-﻿using System.Text;
+﻿using Flip_Temp.ViewModels;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Flip_Temp
 {
@@ -20,8 +11,8 @@ namespace Flip_Temp
         public MainWindow()
         {
             InitializeComponent();
-
-
+            MainWindowViewModel viewModel = new MainWindowViewModel();
+            DataContext = viewModel;
         }
     }
 }
