@@ -26,13 +26,13 @@
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
             <TextBox x:Name="UserInputTextBox"
                    Width="75" Height="35"
-                   Text="Enter Temp..."
+                   Text = "{Binding TemperatureInput, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}"
                    VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Center"
                    Background ="#32393d" Foreground="#bdbdbd" BorderBrush="#373737	"/>
 
             <TextBlock x:Name="ResultTextBlock"
                    Width="75" Height="35"
-                   Text="Result: "
+                   Text="{Binding Result, Mode = OneWay}"
                    VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"
                    Margin="0,25,0,0"
                    Background="Transparent" Foreground="#bdbdbd"/>
