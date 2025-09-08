@@ -19,23 +19,17 @@ namespace Flip_Temp.ViewModels
             }
         }
 
-        private string temperature;
-        public string Temperature
-        {
-            get => temperature;
-            set
-            {
-                temperature = value;
-                OnPropertyChanged();
-            }
-        }
-
         private string temperatureInput;
 
         public string TemperatureInput
         {
             get { return temperatureInput; }
-            set { temperatureInput = TemperatureInput; }
+            set 
+            {
+                temperatureInput = value; 
+                OnPropertyChanged();
+                ConvertTemperature();
+            }
         }
 
         private string result;
@@ -43,26 +37,36 @@ namespace Flip_Temp.ViewModels
         public string Result
         {
             get { return result; }
-            set { result = value; }
+            set 
+            {
+                result = value; 
+                OnPropertyChanged();
+            }
         }
 
-        private void ConvertTemperature(object? parameter)
+        private void ConvertTemperature()
         {
             if (float.TryParse(TemperatureInput, out float tempValue))
             {
                 if (CurrentTypeIsCelsius)
                 {
-                    Result = calculateResult.CelsiusToFarenheit(tempValue);
+                    string result = calculateResult.CelsiusToFarenheit(tempValue);
+                    result += " °F";
+                    Result = result;
                 }
                 else
                 {
-                    Result = calculateResult.FarenheitToCelsius(tempValue);
+                    string result = calculateResult.FarenheitToCelsius(tempValue);
+                    result += " °C";
+                    Result = result;
                 }
             }
             else
             {
                 Result = "Invalid input";
             }
+
+            OnPropertyChanged(nameof(Result));
         }
     }
 }
