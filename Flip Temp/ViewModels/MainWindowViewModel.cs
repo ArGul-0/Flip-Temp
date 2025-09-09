@@ -7,6 +7,8 @@ namespace Flip_Temp.ViewModels
     {
         private CalculateResult calculateResult = new CalculateResult();
 
+        private bool isFirstInteractionToTemperatureInput = true;
+
         // Add properties and commands for data binding here
         private bool currentTypeIsCelsius = true;
         public bool CurrentTypeIsCelsius
