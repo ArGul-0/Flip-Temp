@@ -13,6 +13,8 @@ namespace Flip_Temp
             InitializeComponent();
             MainWindowViewModel viewModel = new MainWindowViewModel();
             DataContext = viewModel;
+
+            UserInputTextBox.Focus();
         }
     }
 }

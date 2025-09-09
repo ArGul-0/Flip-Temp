@@ -43,7 +43,8 @@
                    VerticalAlignment="Bottom" HorizontalAlignment="Center" VerticalContentAlignment="Center"
                    Background="Transparent" Foreground="#bdbdbd" BorderBrush="Transparent"
                    FontSize="16"
-                   Margin="0, 0, 0, 10"/>
+                   Margin="0, 0, 0, 10"
+                   Command="{Binding ChangeToggleTypeCommand}"/>
 
         <TextBlock x:Name="SelectionArrowTextBlock" Grid.Row="0" Grid.Column="1"
                    Width="50" Height="25"

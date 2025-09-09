@@ -9,6 +9,11 @@ namespace Flip_Temp.ViewModels
 
         private bool isFirstInteractionToTemperatureInput = true;
 
+        public MainWindowViewModel()
+        {
+            ChangeToggleTypeCommand = new RelayCommand(ChangeToggleType);
+        }
+
         // Add properties and commands for data binding here
         private bool currentTypeIsCelsius = true;
         public bool CurrentTypeIsCelsius
@@ -43,6 +48,21 @@ namespace Flip_Temp.ViewModels
             {
                 result = value; 
                 OnPropertyChanged();
+            }
+        }
+
+        public RelayCommand ChangeToggleTypeCommand { get; }
+
+        private void ChangeToggleType(object? obj)
+        {
+            CurrentTypeIsCelsius = !CurrentTypeIsCelsius;
+            if (!isFirstInteractionToTemperatureInput)
+            {
+                ConvertTemperature();
+            }
+            else
+            {
+                isFirstInteractionToTemperatureInput = false;
             }
         }
 
