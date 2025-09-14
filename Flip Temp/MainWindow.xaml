@@ -44,14 +44,23 @@
                    Background="Transparent" Foreground="#bdbdbd" BorderBrush="Transparent"
                    FontSize="16"
                    Margin="0, 0, 0, 10"
-                   Command="{Binding ChangeToggleTypeCommand}"/>
+                   Command="{Binding ChangeToggleTypeCommand}"
+                   Click="ChangeButton_Click"/>
 
-        <TextBlock x:Name="SelectionArrowTextBlock" Grid.Row="0" Grid.Column="1"
+        <TextBlock x:Name="SelectionArrowTextBlockCelsiusToFarenheit" Grid.Row="0" Grid.Column="1"
                    Width="50" Height="25"
-                   Text="--->"
+                   Text="⮕"
                    VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"
                    Background="Transparent" Foreground="#bdbdbd"
-                   FontSize="24"/>
+                   FontSize="24"
+                   Visibility="Visible"/>
+        <TextBlock x:Name="SelectionArrowTextBlockFarenheitToCelsius" Grid.Row="0" Grid.Column="1"
+                   Width="50" Height="25"
+                   Text="⬅"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"
+                   Background="Transparent" Foreground="#bdbdbd"
+                   FontSize="24"
+                   Visibility="Hidden"/>
 
 
 

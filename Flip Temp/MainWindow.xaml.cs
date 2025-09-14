@@ -16,5 +16,19 @@ namespace Flip_Temp
 
             UserInputTextBox.Focus();
         }
+
+        private void ChangeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(SelectionArrowTextBlockCelsiusToFarenheit.Visibility == Visibility.Visible)
+            {
+                SelectionArrowTextBlockCelsiusToFarenheit.Visibility = Visibility.Collapsed;
+                SelectionArrowTextBlockFarenheitToCelsius.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                SelectionArrowTextBlockCelsiusToFarenheit.Visibility = Visibility.Visible;
+                SelectionArrowTextBlockFarenheitToCelsius.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }
