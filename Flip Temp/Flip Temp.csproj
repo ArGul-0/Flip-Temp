@@ -16,8 +16,14 @@
 	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
 
 	<PublishTrimmed>false</PublishTrimmed>
+
+	<ApplicationIcon>Resources\Flip Temp Icon.ico</ApplicationIcon>
 	
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Flip Temp Icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\" />
